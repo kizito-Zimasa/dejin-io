@@ -6,8 +6,8 @@ import DifferentiatorBlock from '../../components/DifferentiatorBlock';
 import CTABanner from '../../components/CTABanner';
 
 export const metadata = {
-  title: 'Cortex | AI Platform for Operations',
-  description: 'Production-grade AI platform for embedding systems into operations.',
+  title: "Cortex | AI Platform for Operations",
+  description: "Production-grade AI platform for embedding systems into operations.",
 };
 
 export default function CortexPage() {

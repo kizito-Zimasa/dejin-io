@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,9 +25,7 @@ export default function NavBar() {
     <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-sm">
       <div className="container-max flex items-center justify-between h-20">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-display font-bold text-brand-dark">
-          Dejin
-        </Link>
+        <Logo variant="dark" />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

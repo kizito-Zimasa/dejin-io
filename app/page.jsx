@@ -9,8 +9,8 @@ import IndustryChips from '../components/IndustryChips';
 import { homepageContent } from '../content/homepage';
 
 export const metadata = {
-  title: 'Dejin — AI Systems That Work',
-  description: 'From AI ambition to working systems — guided. We build working AI systems in 3 weeks that transform your operations.',
+  title: "Dejin — AI Systems That Work",
+  description: "From AI ambition to working systems — guided. We build working AI systems in 3 weeks that transform your operations.",
 };
 
 export default function HomePage() {

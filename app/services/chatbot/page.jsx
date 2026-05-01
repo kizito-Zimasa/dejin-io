@@ -7,8 +7,8 @@ import IndustryChips from '../../../components/IndustryChips';
 import { chatbotContent } from '../../../content/chatbot';
 
 export const metadata = {
-  title: 'Customer Service Chatbot | Dejin',
-  description: 'AI chatbot that handles 60–80% of support volume. Deployed in 3 weeks.',
+  title: "Customer Service Chatbot | Dejin",
+  description: "AI chatbot that handles 60–80% of support volume. Deployed in 3 weeks.",
 };
 
 export default function ChatbotPage() {

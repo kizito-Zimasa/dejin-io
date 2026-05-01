@@ -6,8 +6,8 @@ import IndustryChips from '../../../components/IndustryChips';
 import { documentRoutingContent } from '../../../content/document-routing';
 
 export const metadata = {
-  title: 'Document Routing | Dejin',
-  description: 'AI that reads, extracts, and routes documents. 95%+ accuracy. 3 weeks.',
+  title: "Document Routing | Dejin",
+  description: "AI that reads, extracts, and routes documents. 95%+ accuracy. 3 weeks.",
 };
 
 export default function DocumentRoutingPage() {

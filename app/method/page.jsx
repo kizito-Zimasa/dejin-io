@@ -5,8 +5,8 @@ import TimelineSteps from '../../components/TimelineSteps';
 import CTABanner from '../../components/CTABanner';
 
 export const metadata = {
-  title: 'Our Delivery Model | The 3-Week Method',
-  description: 'From AI ambition to working systems in 3 weeks. Guaranteed.',
+  title: "Our Delivery Model | The 3-Week Method",
+  description: "From AI ambition to working systems in 3 weeks. Guaranteed.",
 };
 
 export default function MethodPage() {

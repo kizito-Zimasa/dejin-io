@@ -6,8 +6,8 @@ import IndustryChips from '../../../components/IndustryChips';
 import { statusAutomationContent } from '../../../content/status-automation';
 
 export const metadata = {
-  title: 'Status Automation | Dejin',
-  description: 'Real-time status responses across all channels. 80%+ automation. 3 weeks.',
+  title: "Status Automation | Dejin",
+  description: "Real-time status responses across all channels. 80%+ automation. 3 weeks.",
 };
 
 export default function StatusAutomationPage() {

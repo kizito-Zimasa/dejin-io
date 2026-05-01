@@ -3,8 +3,8 @@ import Footer from '../../components/Footer';
 import HeroSection from '../../components/HeroSection';
 
 export const metadata = {
-  title: 'Contact Dejin | Let\'s Talk',
-  description: 'Book a discovery call with the Dejin team. Let's discuss your biggest bottleneck.',
+  title: "Contact Dejin | Let's Talk",
+  description: "Book a discovery call with the Dejin team. Let's discuss your biggest bottleneck.",
 };
 
 export default function ContactPage() {

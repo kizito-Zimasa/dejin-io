@@ -4,8 +4,8 @@ import HeroSection from '../../components/HeroSection';
 import CTABanner from '../../components/CTABanner';
 
 export const metadata = {
-  title: 'AI Readiness Assessment | Discover Your Starting Point',
-  description: 'Free assessment to discover exactly where to start with AI. 5 minutes. Get your score.',
+  title: "AI Readiness Assessment | Discover Your Starting Point",
+  description: "Free assessment to discover exactly where to start with AI. 5 minutes. Get your score.",
 };
 
 export default function ReadinessPage() {

@@ -5,8 +5,8 @@ import DifferentiatorBlock from '../../components/DifferentiatorBlock';
 import CTABanner from '../../components/CTABanner';
 
 export const metadata = {
-  title: 'About Dejin | Why We Exist',
-  description: 'Dejin transforms operations through AI. We build working systems in 3 weeks.',
+  title: "About Dejin | Why We Exist",
+  description: "Dejin transforms operations through AI. We build working systems in 3 weeks.",
 };
 
 export default function AboutPage() {

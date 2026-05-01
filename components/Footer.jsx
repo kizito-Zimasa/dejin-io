@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-12">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-display font-bold mb-2">Dejin</h3>
+            <div className="mb-4">
+              <Logo variant="white" />
+            </div>
             <p className="text-gray-300 font-body text-sm leading-relaxed">
               Dejin transforms operations through AI. Working systems in 3 weeks, not 6 months.
             </p>
