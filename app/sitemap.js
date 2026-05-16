@@ -10,5 +10,6 @@ export default function sitemap() {
     { url: 'https://dejin.io/readiness', lastModified: new Date() },
     { url: 'https://dejin.io/method', lastModified: new Date() },
     { url: 'https://dejin.io/services/migration', lastModified: new Date() },
+    { url: 'https://dejin.io/roi', lastModified: new Date() },
   ];
 }

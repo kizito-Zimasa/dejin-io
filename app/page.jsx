@@ -5,7 +5,6 @@ import CTABanner from '../components/CTABanner';
 import DeliveryTimeline from '../components/DeliveryTimeline';
 import DifferentiatorBlock from '../components/DifferentiatorBlock';
 import IndustryChips from '../components/IndustryChips';
-import ROICalculator from '../components/ROICalculator';
 import DeviceMockup from '../components/DeviceMockup';
 import ChatPreview from '../components/ChatPreview';
 import CortexDiagram from '../components/CortexDiagram';
@@ -144,7 +143,7 @@ export default function HomePage() {
             {content.quickWins.body}
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {content.quickWins.services.map((service) => (
               <ServiceCard
                 key={service.title}
@@ -153,6 +152,12 @@ export default function HomePage() {
                 link={service.link}
               />
             ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/roi" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-brand-primary text-brand-primary font-body font-semibold rounded-lg hover:bg-brand-light transition-colors">
+              Calculate your ROI →
+            </Link>
           </div>
         </div>
       </section>
@@ -205,20 +210,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* S07 ROI Calculator */}
-      <section className="py-20 bg-white">
-        <div className="container-max">
-          <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-4">
-            What's Your ROI?
-          </h2>
-          <p className="text-lg text-center text-gray-600 font-body mb-12 max-w-xl mx-auto">
-            See the financial case for your first AI system before you commit.
-          </p>
-          <ROICalculator />
-        </div>
-      </section>
-
-      {/* S08 How We Work */}
+      {/* S07 How We Work */}
       <DeliveryTimeline />
 
       {/* S09 Cortex */}
