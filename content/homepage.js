@@ -10,19 +10,6 @@ export const homepageContent = {
     ],
   },
 
-  // Case study
-  caseStudy: {
-    sector: 'Insurance · Kenya',
-    headline: 'From 4-hour claim queries to 8 seconds',
-    challenge: 'A Kenyan insurer was handling 300+ daily status inquiries by phone. Agents spent 70% of their day answering the same question.',
-    result: 'AI status chatbot deployed in 3 weeks. 82% of queries now resolved without human intervention. Agents refocused on complex cases.',
-    metrics: [
-      { value: '82%', label: 'Query automation' },
-      { value: '3 wks', label: 'Time to deploy' },
-      { value: '4h → 8s', label: 'Response time' },
-    ],
-  },
-
   // S01 Hero
   hero: {
     headline: "From legacy workflows to AI-powered operations.",

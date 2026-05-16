@@ -162,55 +162,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* S06 Case Study */}
-      <section className="py-20 bg-surface">
-        <div className="container-max max-w-4xl">
-          <p className="text-xs font-body font-semibold text-brand-primary uppercase tracking-widest text-center mb-2">
-            In the field
-          </p>
-          <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-12">
-            {content.caseStudy.headline}
-          </h2>
-
-          <div className="bg-white rounded-2xl border border-border p-8 md:p-12 shadow-sm">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-xs font-body font-semibold bg-brand-light text-brand-dark px-3 py-1 rounded-full">
-                {content.caseStudy.sector}
-              </span>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-10">
-              <div>
-                <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                  The Challenge
-                </p>
-                <p className="font-body text-gray-700 leading-relaxed">
-                  {content.caseStudy.challenge}
-                </p>
-              </div>
-              <div>
-                <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                  The Outcome
-                </p>
-                <p className="font-body text-gray-700 leading-relaxed">
-                  {content.caseStudy.result}
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 border-t border-border pt-8">
-              {content.caseStudy.metrics.map((m) => (
-                <div key={m.label} className="text-center">
-                  <p className="text-2xl font-display font-bold text-brand-dark mb-1">{m.value}</p>
-                  <p className="text-sm font-body text-gray-500">{m.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* S07 How We Work */}
+      {/* S06 How We Work */}
       <DeliveryTimeline />
 
       {/* S09 Cortex */}

@@ -135,7 +135,57 @@ export default function ChatbotPage() {
         </div>
       </section>
 
-      {/* S06 Timeline & Investment */}
+      {/* S06 Case Study */}
+      <section className="py-16 bg-white">
+        <div className="container-max max-w-3xl">
+          <p className="text-xs font-body font-semibold text-brand-primary uppercase tracking-widest text-center mb-2">
+            In the field
+          </p>
+          <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-12">
+            From 4-hour claim queries to 8 seconds
+          </h2>
+
+          <div className="bg-surface rounded-2xl border border-border p-8 md:p-10">
+            <span className="text-xs font-body font-semibold bg-brand-light text-brand-dark px-3 py-1 rounded-full">
+              Insurance · Kenya
+            </span>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-6 mb-10">
+              <div>
+                <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  The Challenge
+                </p>
+                <p className="font-body text-gray-700 leading-relaxed">
+                  A Kenyan insurer was handling 300+ daily status inquiries by phone. Agents spent 70% of their day answering the same question.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  The Outcome
+                </p>
+                <p className="font-body text-gray-700 leading-relaxed">
+                  AI status chatbot deployed in 3 weeks. 82% of queries now resolved without human intervention. Agents refocused on complex cases.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 border-t border-border pt-8">
+              {[
+                { value: '82%', label: 'Query automation' },
+                { value: '3 wks', label: 'Time to deploy' },
+                { value: '4h → 8s', label: 'Response time' },
+              ].map((m) => (
+                <div key={m.label} className="text-center">
+                  <p className="text-2xl font-display font-bold text-brand-dark mb-1">{m.value}</p>
+                  <p className="text-sm font-body text-gray-500">{m.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* S07 Timeline & Investment */}
       <section className="py-16 bg-white">
         <div className="container-max max-w-2xl">
           <h2 className="text-4xl font-display font-bold text-brand-dark mb-8 text-center">
