@@ -19,6 +19,7 @@ export default function NavBar() {
     { label: 'Customer Service Chatbot', href: '/services/chatbot' },
     { label: 'Document Routing', href: '/services/document-routing' },
     { label: 'Status Automation', href: '/services/status-automation' },
+    { label: 'Legacy-to-AI Migration', href: '/services/migration' },
   ];
 
   return (

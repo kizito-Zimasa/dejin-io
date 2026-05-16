@@ -6,6 +6,7 @@ import CTABanner from '../components/CTABanner';
 import DeliveryTimeline from '../components/DeliveryTimeline';
 import DifferentiatorBlock from '../components/DifferentiatorBlock';
 import IndustryChips from '../components/IndustryChips';
+import ROICalculator from '../components/ROICalculator';
 import { homepageContent } from '../content/homepage';
 
 export const metadata = {
@@ -101,12 +102,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* ROI Calculator Placeholder */}
-          <div className="bg-surface rounded-lg p-12 text-center">
-            <p className="text-gray-500 font-body">
-              ROI Calculator component — interactive calculation tool coming
-            </p>
-          </div>
+          {/* ROI Calculator */}
+          <ROICalculator />
         </div>
       </section>
 

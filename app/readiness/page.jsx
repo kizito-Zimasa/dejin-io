@@ -2,6 +2,7 @@ import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import HeroSection from '../../components/HeroSection';
 import CTABanner from '../../components/CTABanner';
+import ReadinessAssessment from '../../components/ReadinessAssessment';
 
 export const metadata = {
   title: "AI Readiness Assessment | Discover Your Starting Point",
@@ -25,14 +26,7 @@ export default function ReadinessPage() {
       {/* S02 Assessment Form */}
       <section id="assessment" className="py-16 bg-surface">
         <div className="container-max max-w-2xl">
-          <div className="bg-white rounded-lg p-12 border border-border">
-            <p className="text-gray-500 font-body text-center mb-8">
-              ReadinessAssessment component — interactive form with 7 dimensions × 3 questions
-            </p>
-            <p className="text-gray-500 font-body text-center text-sm">
-              Questions will cover: Strategy, Capability, Data, Infrastructure, Change Management, Risk/Compliance, and Industry Context
-            </p>
-          </div>
+          <ReadinessAssessment />
         </div>
       </section>
 

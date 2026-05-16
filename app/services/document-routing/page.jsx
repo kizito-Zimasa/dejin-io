@@ -3,6 +3,7 @@ import Footer from '../../../components/Footer';
 import MetricCard from '../../../components/MetricCard';
 import CTABanner from '../../../components/CTABanner';
 import IndustryChips from '../../../components/IndustryChips';
+import DocumentDemo from '../../../components/DocumentDemo';
 import { documentRoutingContent } from '../../../content/document-routing';
 
 export const metadata = {
@@ -32,12 +33,8 @@ export default function DocumentRoutingPage() {
               <IndustryChips industries={content.hero.industries} />
             </div>
 
-            {/* Right: Document Demo Placeholder */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border border-border h-96 flex items-center justify-center">
-              <p className="text-gray-500 font-body text-center">
-                DocumentDemo component — will embed file upload & routing UI
-              </p>
-            </div>
+            {/* Right: Document Demo */}
+            <DocumentDemo />
           </div>
         </div>
       </section>

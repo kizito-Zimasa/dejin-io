@@ -4,6 +4,7 @@ import HeroSection from '../../../components/HeroSection';
 import MetricCard from '../../../components/MetricCard';
 import CTABanner from '../../../components/CTABanner';
 import IndustryChips from '../../../components/IndustryChips';
+import ChatDemo from '../../../components/ChatDemo';
 import { chatbotContent } from '../../../content/chatbot';
 
 export const metadata = {
@@ -33,12 +34,8 @@ export default function ChatbotPage() {
               <IndustryChips industries={content.hero.industries} />
             </div>
 
-            {/* Right: Chat Demo Placeholder */}
-            <div className="bg-white rounded-lg shadow-lg p-8 border border-border h-96 flex items-center justify-center">
-              <p className="text-gray-500 font-body text-center">
-                Live ChatDemo component — will embed interactive chat interface
-              </p>
-            </div>
+            {/* Right: Chat Demo */}
+            <ChatDemo />
           </div>
         </div>
       </section>

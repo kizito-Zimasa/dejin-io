@@ -49,6 +49,14 @@ export default function Footer() {
                   Status Automation
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/services/migration"
+                  className="text-gray-300 font-body text-sm hover:text-brand-primary transition-colors"
+                >
+                  Legacy Migration
+                </Link>
+              </li>
             </ul>
           </div>
 
