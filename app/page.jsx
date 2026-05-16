@@ -68,9 +68,15 @@ export default function HomePage() {
       </section>
 
       {/* S02 Proof Strip */}
-      <section className="py-10 bg-brand-dark">
-        <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <section className="py-12 bg-brand-dark">
+        <div className="container-max max-w-4xl">
+          <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-widest text-center mb-2">
+            {content.proofStrip.context}
+          </p>
+          <p className="text-sm font-body text-gray-400 text-center mb-10 max-w-xl mx-auto">
+            {content.proofStrip.subtext}
+          </p>
+          <div className="grid grid-cols-3 gap-6 text-center">
             {content.proofStrip.stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl font-display font-bold text-brand-primary mb-1">{stat.value}</p>

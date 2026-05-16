@@ -1,11 +1,12 @@
 export const homepageContent = {
   // Proof strip
   proofStrip: {
+    context: 'The experience behind Dejin is not new.',
+    subtext: 'Founder-led by operators with deep enterprise technology and transformation experience across African markets.',
     stats: [
-      { value: '20+', label: 'Years operator experience' },
-      { value: '60+', label: 'African clients' },
-      { value: '10', label: 'Countries' },
-      { value: '3 weeks', label: 'Delivery guarantee' },
+      { value: '20+', label: 'Years enterprise technology leadership' },
+      { value: '60+', label: 'Clients served by the founding team' },
+      { value: '10', label: 'African countries operated in' },
     ],
   },
 
@@ -56,13 +57,13 @@ export const homepageContent = {
 
   // S03 The Solution
   solution: {
-    headline: "Working Systems. 3 Weeks. Guaranteed.",
-    body: "We build AI systems that are embedded in your operations, not bolted on. You get working software in 3 weeks, trained teams, and a platform that scales.",
+    headline: "AI built into the way your business actually works.",
+    body: "We don't deliver isolated demos. We identify a high-impact workflow, connect it to your live systems, train your team, and leave you with a working AI capability that can scale.",
     benefits: [
-      "Live in 3 weeks — no 6-month pilots",
-      "Embedded in your systems — not standalone",
-      "Team trained on day one — adoption built in",
-      "Results guaranteed — or we extend for free",
+      "Embedded in your operations — not standalone",
+      "Connected to live systems — not demo data",
+      "Adopted by teams — not forced from outside",
+      "Built on Cortex — not one-off automation",
     ],
   },
 
@@ -170,8 +171,8 @@ export const homepageContent = {
 
   // S10 CTA Banner
   ctaBanner: {
-    headline: "Ready to Stop Running Pilots?",
-    subheading: "Let's talk about your biggest bottleneck. We'll recommend the right entry point — no 18-month commitment required.",
+    headline: "Ready to launch your first working AI system?",
+    subheading: "Let's identify the right entry point and build it in 3 weeks — no 18-month commitment, no expensive pilots.",
     cta1: "Book a Discovery Call",
     cta2: "Take the Free Scorecard",
   },

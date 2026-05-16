@@ -21,10 +21,10 @@ export default function DeliveryTimeline() {
     <section className="py-20 bg-white">
       <div className="container-max">
         <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-4">
-          Working Systems. 3 Weeks. Guaranteed.
+          The 3-Week Delivery Method
         </h2>
         <p className="text-lg text-center text-gray-600 font-body mb-16 max-w-2xl mx-auto">
-          Three phases. One outcome: a working AI system embedded in your operations.
+          One scoped workflow. Three focused phases. A working AI system your team can use.
         </p>
 
         {/* Timeline */}
