@@ -1,141 +1,125 @@
 const CHANNELS = ['WhatsApp', 'Email', 'Web Portal', 'Mobile App'];
 const SYSTEMS = ['CRM', 'ERP', 'Core Banking', 'Legacy DB'];
-const OUTCOMES = [
-  { label: 'Automation', desc: 'Routine tasks handled without human touch' },
-  { label: 'Insights', desc: 'Operational data surfaces in real time' },
-  { label: 'Compliance', desc: 'Audit trails and governance built in' },
-];
+const OUTCOMES = ['Automation', 'Insights', 'Compliance'];
 
-function Arrow({ vertical = false }) {
-  if (vertical) {
-    return (
-      <div className="flex justify-center py-2">
-        <div className="flex flex-col items-center gap-0">
-          <div className="w-0.5 h-6 bg-brand-primary" />
-          <div
-            className="w-0 h-0"
-            style={{
-              borderLeft: '6px solid transparent',
-              borderRight: '6px solid transparent',
-              borderTop: '8px solid #F28C28',
-            }}
-          />
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div className="flex items-center px-1">
-      <div className="h-0.5 w-6 bg-brand-primary" />
-      <div
-        className="w-0 h-0"
-        style={{
-          borderTop: '6px solid transparent',
-          borderBottom: '6px solid transparent',
-          borderLeft: '8px solid #F28C28',
-        }}
-      />
-    </div>
-  );
-}
+// Layout constants
+const ROW_CY = [55, 115, 175, 235];
+const BOX_W = 148;
+const BOX_H = 44;
+const CORTEX_X = 218;
+const CORTEX_W = 324;
+const SYS_X = 614;
+const CORTEX_Y = ROW_CY[0] - BOX_H / 2;
+const CORTEX_H = ROW_CY[3] - ROW_CY[0] + BOX_H; // 224
+const CORTEX_CX = CORTEX_X + CORTEX_W / 2; // 380
 
 export default function CortexDiagram() {
   return (
-    <div className="w-full overflow-x-auto">
-      <div className="min-w-[640px] flex flex-col items-center gap-0">
+    <svg
+      viewBox="0 0 762 375"
+      className="w-full"
+      style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+      aria-label="Cortex platform architecture diagram"
+    >
+      <defs>
+        <marker id="cdArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#F28C28" />
+        </marker>
+        <linearGradient id="cortexGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#2a3238" />
+          <stop offset="100%" stopColor="#1F2428" />
+        </linearGradient>
+      </defs>
 
-        {/* Top row: Channels → Cortex → Systems */}
-        <div className="flex items-center justify-center gap-0 w-full">
+      {/* ── Column labels ── */}
+      <text x={BOX_W / 2} y="18" textAnchor="middle" fontSize="9.5" fill="#9CA3AF" letterSpacing="1.5" fontWeight="600">CHANNELS</text>
+      <text x={CORTEX_CX} y="18" textAnchor="middle" fontSize="9.5" fill="#9CA3AF" letterSpacing="1.5" fontWeight="600">CORTEX PLATFORM</text>
+      <text x={SYS_X + BOX_W / 2} y="18" textAnchor="middle" fontSize="9.5" fill="#9CA3AF" letterSpacing="1.5" fontWeight="600">YOUR SYSTEMS</text>
 
-          {/* Channels */}
-          <div className="flex flex-col gap-2 w-40">
-            <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-widest text-center mb-1">
-              Channels
-            </p>
-            {CHANNELS.map((ch) => (
-              <div
-                key={ch}
-                className="bg-white border border-border rounded-xl px-3 py-2 text-sm font-body text-brand-dark text-center shadow-sm"
-              >
-                {ch}
-              </div>
-            ))}
-          </div>
+      {/* ── Channel boxes ── */}
+      {CHANNELS.map((ch, i) => (
+        <g key={ch}>
+          <rect x="0" y={ROW_CY[i] - BOX_H / 2} width={BOX_W} height={BOX_H} rx="8" fill="white" stroke="#DADDE1" strokeWidth="1.5" />
+          <text x={BOX_W / 2} y={ROW_CY[i] + 5} textAnchor="middle" fontSize="13" fill="#1F2428" fontWeight="500">{ch}</text>
+        </g>
+      ))}
 
-          {/* Arrow right */}
-          <div className="flex flex-col gap-2 mt-6">
-            {CHANNELS.map((ch) => (
-              <Arrow key={ch} />
-            ))}
-          </div>
+      {/* ── Arrows: channels → cortex ── */}
+      {ROW_CY.map((cy, i) => (
+        <line key={i} x1={BOX_W + 1} y1={cy} x2={CORTEX_X - 5} y2={cy} stroke="#F28C28" strokeWidth="1.5" markerEnd="url(#cdArrow)" />
+      ))}
 
-          {/* Cortex core */}
-          <div className="mx-2 bg-brand-dark rounded-2xl p-6 flex flex-col items-center justify-center w-48 shadow-lg">
-            <div className="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center mb-3">
-              <span className="text-white font-display font-bold text-lg">C</span>
-            </div>
-            <p className="text-white font-display font-bold text-lg text-center leading-tight">
-              Cortex
-            </p>
-            <p className="text-gray-400 font-body text-xs text-center mt-1">
-              by Dejin
-            </p>
-            <div className="mt-4 space-y-1 w-full">
-              {['Orchestration', 'Memory', 'Governance'].map((layer) => (
-                <div
-                  key={layer}
-                  className="bg-white bg-opacity-10 rounded-lg px-2 py-1 text-xs font-body text-gray-300 text-center"
-                >
-                  {layer}
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* ── Cortex box ── */}
+      <rect x={CORTEX_X} y={CORTEX_Y} width={CORTEX_W} height={CORTEX_H} rx="16" fill="url(#cortexGrad)" />
 
-          {/* Arrow right */}
-          <div className="flex flex-col gap-2 mt-6">
-            {SYSTEMS.map((s) => (
-              <Arrow key={s} />
-            ))}
-          </div>
+      {/* Cortex brand circle */}
+      <circle cx={CORTEX_CX} cy={CORTEX_Y + 38} r="20" fill="#F28C28" />
+      <text x={CORTEX_CX} y={CORTEX_Y + 44} textAnchor="middle" fontSize="15" fill="white" fontWeight="700">C</text>
 
-          {/* Systems */}
-          <div className="flex flex-col gap-2 w-40">
-            <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-widest text-center mb-1">
-              Your Systems
-            </p>
-            {SYSTEMS.map((s) => (
-              <div
-                key={s}
-                className="bg-white border border-border rounded-xl px-3 py-2 text-sm font-body text-brand-dark text-center shadow-sm"
-              >
-                {s}
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Cortex title */}
+      <text x={CORTEX_CX} y={CORTEX_Y + 78} textAnchor="middle" fontSize="19" fill="white" fontWeight="700">Cortex</text>
+      <text x={CORTEX_CX} y={CORTEX_Y + 96} textAnchor="middle" fontSize="11" fill="#6B7280">by Dejin</text>
 
-        {/* Down arrow */}
-        <Arrow vertical />
+      {/* Layer pills */}
+      {['Orchestration', 'Memory', 'Governance'].map((layer, i) => (
+        <g key={layer}>
+          <rect
+            x={CORTEX_X + 50}
+            y={CORTEX_Y + 112 + i * 38}
+            width={CORTEX_W - 100}
+            height="28"
+            rx="7"
+            fill="rgba(255,255,255,0.07)"
+            stroke="rgba(255,255,255,0.12)"
+            strokeWidth="1"
+          />
+          <text
+            x={CORTEX_CX}
+            y={CORTEX_Y + 131 + i * 38}
+            textAnchor="middle"
+            fontSize="12"
+            fill="#D1D5DB"
+          >
+            {layer}
+          </text>
+        </g>
+      ))}
 
-        {/* Outcomes row */}
-        <div className="w-full">
-          <p className="text-xs font-body font-semibold text-gray-500 uppercase tracking-widest text-center mb-3">
-            Outcomes
-          </p>
-          <div className="grid grid-cols-3 gap-4">
-            {OUTCOMES.map((o) => (
-              <div
-                key={o.label}
-                className="bg-brand-light rounded-xl p-4 text-center"
-              >
-                <p className="font-display font-bold text-brand-dark text-sm mb-1">{o.label}</p>
-                <p className="font-body text-xs text-gray-600 leading-relaxed">{o.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+      {/* ── Arrows: cortex → systems ── */}
+      {ROW_CY.map((cy, i) => (
+        <line key={i} x1={CORTEX_X + CORTEX_W + 5} y1={cy} x2={SYS_X - 5} y2={cy} stroke="#F28C28" strokeWidth="1.5" markerEnd="url(#cdArrow)" />
+      ))}
+
+      {/* ── System boxes ── */}
+      {SYSTEMS.map((sys, i) => (
+        <g key={sys}>
+          <rect x={SYS_X} y={ROW_CY[i] - BOX_H / 2} width={BOX_W} height={BOX_H} rx="8" fill="white" stroke="#DADDE1" strokeWidth="1.5" />
+          <text x={SYS_X + BOX_W / 2} y={ROW_CY[i] + 5} textAnchor="middle" fontSize="13" fill="#1F2428" fontWeight="500">{sys}</text>
+        </g>
+      ))}
+
+      {/* ── Down arrow to outcomes ── */}
+      <line
+        x1={CORTEX_CX} y1={CORTEX_Y + CORTEX_H + 1}
+        x2={CORTEX_CX} y2={CORTEX_Y + CORTEX_H + 26}
+        stroke="#F28C28" strokeWidth="1.5" markerEnd="url(#cdArrow)"
+      />
+
+      {/* Outcomes label */}
+      <text x={CORTEX_CX} y={CORTEX_Y + CORTEX_H + 48} textAnchor="middle" fontSize="9.5" fill="#9CA3AF" letterSpacing="1.5" fontWeight="600">OUTCOMES</text>
+
+      {/* ── Outcome boxes ── */}
+      {OUTCOMES.map((o, i) => {
+        const totalW = OUTCOMES.length * 100 + (OUTCOMES.length - 1) * 12;
+        const startX = CORTEX_CX - totalW / 2;
+        const x = startX + i * 112;
+        return (
+          <g key={o}>
+            <rect x={x} y={CORTEX_Y + CORTEX_H + 56} width="100" height="36" rx="8" fill="#FFF3E6" stroke="#F28C28" strokeWidth="1.2" />
+            <text x={x + 50} y={CORTEX_Y + CORTEX_H + 80} textAnchor="middle" fontSize="12" fill="#1F2428" fontWeight="600">{o}</text>
+          </g>
+        );
+      })}
+    </svg>
   );
 }

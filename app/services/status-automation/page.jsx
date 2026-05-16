@@ -4,6 +4,7 @@ import MetricCard from '../../../components/MetricCard';
 import CTABanner from '../../../components/CTABanner';
 import IndustryChips from '../../../components/IndustryChips';
 import ProcessFlowDiagram from '../../../components/ProcessFlowDiagram';
+import StatusIllustration from '../../../components/StatusIllustration';
 import { statusAutomationContent } from '../../../content/status-automation';
 
 const statusFlow = {
@@ -41,15 +42,20 @@ export default function StatusAutomationPage() {
 
       {/* S01 Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-brand-light to-white">
-        <div className="container-max max-w-3xl text-center">
-          <h1 className="text-5xl md:text-6xl font-display font-bold text-brand-dark mb-6 leading-tight">
-            {content.hero.headline}
-          </h1>
-          <p className="text-xl text-gray-700 font-body mb-8">
-            {content.hero.subheading}
-          </p>
-          <div className="flex justify-center">
-            <IndustryChips industries={content.hero.industries} />
+        <div className="container-max max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl md:text-6xl font-display font-bold text-brand-dark mb-6 leading-tight">
+                {content.hero.headline}
+              </h1>
+              <p className="text-xl text-gray-700 font-body mb-8">
+                {content.hero.subheading}
+              </p>
+              <IndustryChips industries={content.hero.industries} />
+            </div>
+            <div className="hidden md:flex justify-center">
+              <StatusIllustration />
+            </div>
           </div>
         </div>
       </section>
