@@ -11,7 +11,7 @@ export default function ServiceCard({
 
   return (
     <div
-      className={`rounded-lg overflow-hidden transition-all hover:shadow-lg ${
+      className={`rounded-xl overflow-hidden transition-all hover:shadow-lg ${
         isFeatured
           ? 'bg-brand-primary text-white p-8'
           : 'bg-white border border-border p-8'
@@ -21,7 +21,7 @@ export default function ServiceCard({
       {icon && (
         <div
           className={`text-4xl mb-6 ${
-            isFeatured ? 'text-white' : 'text-brand-primary'
+            isFeatured ? 'text-white' : 'text-brand-dark'
           }`}
         >
           {icon}

@@ -1,4 +1,27 @@
 export const homepageContent = {
+  // Proof strip
+  proofStrip: {
+    stats: [
+      { value: '20+', label: 'Years operator experience' },
+      { value: '60+', label: 'African clients' },
+      { value: '10', label: 'Countries' },
+      { value: '3 weeks', label: 'Delivery guarantee' },
+    ],
+  },
+
+  // Case study
+  caseStudy: {
+    sector: 'Insurance · Kenya',
+    headline: 'From 4-hour claim queries to 8 seconds',
+    challenge: 'A Kenyan insurer was handling 300+ daily status inquiries by phone. Agents spent 70% of their day answering the same question.',
+    result: 'AI status chatbot deployed in 3 weeks. 82% of queries now resolved without human intervention. Agents refocused on complex cases.',
+    metrics: [
+      { value: '82%', label: 'Query automation' },
+      { value: '3 wks', label: 'Time to deploy' },
+      { value: '4h → 8s', label: 'Response time' },
+    ],
+  },
+
   // S01 Hero
   hero: {
     headline: "From legacy workflows to AI-powered operations.",
@@ -106,11 +129,6 @@ export const homepageContent = {
       "Healthcare",
       "Finance",
       "Logistics",
-      "Energy",
-      "Manufacturing",
-      "Retail",
-      "Education",
-      "Government",
     ],
     africaBody: "We're based in Africa. We've built for African companies. We get the context.",
   },

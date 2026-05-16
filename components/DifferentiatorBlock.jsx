@@ -8,7 +8,7 @@ export default function DifferentiatorBlock({
 
   return (
     <div
-      className={`p-8 rounded-lg transition-all ${
+      className={`p-8 rounded-xl transition-all ${
         isFeatured
           ? 'bg-brand-primary text-white'
           : 'bg-surface'
@@ -16,8 +16,8 @@ export default function DifferentiatorBlock({
     >
       {/* Icon */}
       {icon && (
-        <div className={`text-5xl mb-4 ${
-          isFeatured ? 'text-white' : 'text-brand-primary'
+        <div className={`text-4xl mb-4 font-bold ${
+          isFeatured ? 'text-white' : 'text-brand-dark'
         }`}>
           {icon}
         </div>
