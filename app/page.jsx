@@ -25,7 +25,7 @@ export default function HomePage() {
       <NavBar />
 
       {/* S01 Hero */}
-      <section className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-brand-light to-white">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-brand-light to-white">
         <div className="container-max">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: text */}
