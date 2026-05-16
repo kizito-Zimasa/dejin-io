@@ -1,12 +1,11 @@
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
-import HeroSection from '../../components/HeroSection';
 import CTABanner from '../../components/CTABanner';
 import ReadinessAssessment from '../../components/ReadinessAssessment';
 
 export const metadata = {
-  title: "AI Readiness Assessment | Discover Your Starting Point",
-  description: "Free assessment to discover exactly where to start with AI. 5 minutes. Get your score.",
+  title: "Dejin AI Readiness Scorecard | Discover Your Starting Point",
+  description: "Free 5-minute diagnostic across 7 AI readiness dimensions. Get your score, maturity stage, and top 3 quick wins.",
 };
 
 export default function ReadinessPage() {
@@ -15,100 +14,61 @@ export default function ReadinessPage() {
       <NavBar />
 
       {/* S01 Hero */}
-      <HeroSection
-        headline="Discover Exactly Where to Start with AI"
-        subheading="Free 5-minute assessment. Uncover your AI readiness across 7 dimensions."
-        cta1Label="Take the Assessment"
-        cta1Link="#assessment"
-        variant="secondary"
-      />
+      <section className="pt-32 pb-16 bg-gradient-to-br from-brand-light to-white text-center">
+        <div className="container-max max-w-2xl">
+          <p className="text-sm font-body font-semibold text-brand-primary uppercase tracking-widest mb-4">
+            Free diagnostic tool
+          </p>
+          <h1 className="text-5xl font-display font-bold text-brand-dark mb-6 leading-tight">
+            Dejin AI Readiness Scorecard
+          </h1>
+          <p className="text-lg text-gray-700 font-body mb-8 leading-relaxed">
+            5 minutes. 21 questions across 7 dimensions. Get your AI readiness score, maturity stage, and your top 3 quick wins — immediately.
+          </p>
+          <p className="text-sm font-body text-gray-500 mb-8">
+            Not ready for a call yet? Start here.
+          </p>
+          <a
+            href="#assessment"
+            className="inline-block px-8 py-3.5 bg-brand-primary text-white font-body font-semibold rounded-lg hover:opacity-90 transition-opacity"
+          >
+            Take the Scorecard →
+          </a>
+        </div>
+      </section>
 
-      {/* S02 Assessment Form */}
+      {/* S02 What you get */}
+      <section className="py-12 bg-white border-b border-border">
+        <div className="container-max max-w-3xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { value: '7–28', label: 'Readiness score' },
+              { value: '5', label: 'Maturity stages' },
+              { value: '3', label: 'Quick wins identified' },
+              { value: '5 min', label: 'Time to complete' },
+            ].map((item) => (
+              <div key={item.label} className="text-center p-4 bg-surface rounded-xl">
+                <p className="text-3xl font-display font-bold text-brand-primary mb-1">{item.value}</p>
+                <p className="text-sm font-body text-gray-600">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* S03 Assessment Form */}
       <section id="assessment" className="py-16 bg-surface">
         <div className="container-max max-w-2xl">
           <ReadinessAssessment />
         </div>
       </section>
 
-      {/* S03 How It Works */}
-      <section className="py-16 bg-white">
-        <div className="container-max max-w-2xl text-center">
-          <h2 className="text-4xl font-display font-bold text-brand-dark mb-8">
-            How This Works
-          </h2>
-
-          <div className="space-y-6 text-lg font-body text-gray-700">
-            <p>
-              <span className="font-bold text-brand-primary">Answer 21 questions</span> across 7 key AI readiness dimensions
-            </p>
-            <p>
-              <span className="font-bold text-brand-primary">Get your score</span> immediately — maturity stage from Embryonic to Advanced
-            </p>
-            <p>
-              <span className="font-bold text-brand-primary">See recommendations</span> for your next 3 quick wins
-            </p>
-            <p>
-              <span className="font-bold text-brand-primary">Get personalized PDF</span> emailed to you with full results
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* S04 Results Display Placeholder */}
-      <section className="py-16 bg-brand-light">
-        <div className="container-max max-w-2xl text-center">
-          <h2 className="text-4xl font-display font-bold text-brand-dark mb-8">
-            What You'll Get
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-8">
-              <p className="text-6xl font-display font-bold text-brand-primary mb-2">
-                0–100
-              </p>
-              <p className="font-body text-gray-700">
-                Your AI readiness score
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-8">
-              <p className="text-2xl font-display font-bold text-brand-dark mb-2">
-                Maturity Stage
-              </p>
-              <p className="font-body text-gray-700">
-                From Embryonic to Advanced
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-8">
-              <p className="text-2xl font-display font-bold text-brand-dark mb-2">
-                Top Gaps
-              </p>
-              <p className="font-body text-gray-700">
-                Your 3 biggest opportunities
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-8">
-              <p className="text-2xl font-display font-bold text-brand-dark mb-2">
-                Quick Wins
-              </p>
-              <p className="font-body text-gray-700">
-                Next 90 days action plan
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <CTABanner
-        headline="Ready to Know Your AI Readiness?"
-        subheading="Free assessment. 5 minutes. Actionable insights."
-        cta1Label="Take the Assessment"
-        cta1Link="#assessment"
-        cta2Label="Book a Call Instead"
-        cta2Link="/contact"
+        headline="Want to discuss your results?"
+        subheading="Book a free 30-minute call and we'll walk through your score and recommend the right entry point."
+        cta1Label="Book a Discovery Call"
+        cta1Link="/contact"
       />
 
       <Footer />

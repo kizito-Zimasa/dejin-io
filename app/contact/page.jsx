@@ -1,6 +1,7 @@
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import HeroSection from '../../components/HeroSection';
+import CalendlyEmbed from '../../components/CalendlyEmbed';
 
 export const metadata = {
   title: "Contact Dejin | Let's Talk",
@@ -9,7 +10,7 @@ export const metadata = {
 
 export default function ContactPage() {
   const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@dejin.io';
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/dejin';
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || '';
 
   return (
     <>
@@ -24,12 +25,8 @@ export default function ContactPage() {
 
       {/* Calendly Embed */}
       <section className="py-16 bg-white">
-        <div className="container-max max-w-2xl">
-          <div className="bg-surface rounded-lg p-8 min-h-96 flex items-center justify-center">
-            <p className="text-gray-500 font-body text-center">
-              Calendly widget — embed at {calendlyUrl}
-            </p>
-          </div>
+        <div className="container-max max-w-3xl">
+          <CalendlyEmbed url={calendlyUrl} />
         </div>
       </section>
 

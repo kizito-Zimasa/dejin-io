@@ -68,7 +68,7 @@ export default function NavBar() {
             href="/readiness"
             className="px-4 py-2 border-2 border-brand-primary text-brand-primary font-body font-semibold rounded-lg hover:bg-brand-light transition-colors"
           >
-            Take Assessment
+            Free Scorecard
           </Link>
           <Link
             href="/contact"
@@ -137,7 +137,7 @@ export default function NavBar() {
               className="block px-4 py-2 border-2 border-brand-primary text-brand-primary font-body font-semibold rounded-lg text-center hover:bg-brand-light transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Take Assessment
+              Free Scorecard
             </Link>
             <Link
               href="/contact"

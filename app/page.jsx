@@ -67,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* S02 The Problem */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-max">
           <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-8">
             {content.problem.headline}
@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* S03 The Solution */}
-      <section className="py-16 bg-brand-dark text-white">
+      <section className="py-20 bg-brand-dark text-white">
         <div className="container-max">
           <h2 className="text-4xl font-display font-bold text-center mb-6">
             {content.solution.headline}
@@ -116,7 +116,7 @@ export default function HomePage() {
       </section>
 
       {/* S04 Quick Wins & ROI Calculator */}
-      <section id="quick-wins" className="py-16 bg-white">
+      <section id="quick-wins" className="py-20 bg-white">
         <div className="container-max">
           <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-4">
             {content.quickWins.headline}
@@ -164,12 +164,12 @@ export default function HomePage() {
       </section>
 
       {/* S07 Industries & Africa */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-max">
           <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-4">
             {content.industries.headline}
           </h2>
-          <p className="text-lg text-center text-gray-600 font-body mb-12">
+          <p className="text-lg text-center text-gray-600 font-body mb-12 max-w-2xl mx-auto">
             {content.industries.body}
           </p>
 

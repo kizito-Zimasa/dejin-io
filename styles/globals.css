@@ -22,12 +22,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @layer components {
+  /* Standard button — use these classes instead of inline Tailwind on every button */
   .btn-primary {
-    @apply px-6 py-3 bg-brand-primary text-white font-semibold rounded-lg hover:opacity-90 transition-opacity;
+    @apply px-8 py-3.5 bg-brand-primary text-white font-body font-semibold rounded-lg hover:opacity-90 transition-opacity text-center;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-brand-primary text-brand-primary font-semibold rounded-lg hover:bg-brand-light transition-colors;
+    @apply px-8 py-3.5 border-2 border-brand-primary text-brand-primary font-body font-semibold rounded-lg hover:bg-brand-light transition-colors text-center;
+  }
+
+  .btn-dark {
+    @apply px-8 py-3.5 border-2 border-brand-dark text-brand-dark font-body font-semibold rounded-lg hover:bg-brand-light transition-colors text-center;
+  }
+
+  .btn-sm {
+    @apply px-5 py-2.5 font-body font-semibold rounded-lg transition-all text-sm;
   }
 
   .container-max {

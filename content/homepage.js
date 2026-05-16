@@ -140,17 +140,17 @@ export const homepageContent = {
 
   // S09 AI Readiness Entry
   readinessEntry: {
-    headline: "Where Are You on the AI Journey?",
-    body: "Take our free assessment to discover exactly where to start.",
-    cta: "Take the Assessment",
+    headline: "Not Ready for a Call Yet?",
+    body: "Take the free Dejin AI Readiness Scorecard — 5 minutes, 21 questions, and you'll know exactly where to start and what your top 3 quick wins are.",
+    cta: "Take the Free Scorecard →",
     link: "/readiness",
   },
 
   // S10 CTA Banner
   ctaBanner: {
-    headline: "Ready to Stop Failing at AI?",
-    subheading: "Let's talk about your biggest bottleneck. We'll show you the three quick wins.",
+    headline: "Ready to Stop Running Pilots?",
+    subheading: "Let's talk about your biggest bottleneck. We'll recommend the right entry point — no 18-month commitment required.",
     cta1: "Book a Discovery Call",
-    cta2: "Take the Assessment",
+    cta2: "Take the Free Scorecard",
   },
 };

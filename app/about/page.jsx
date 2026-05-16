@@ -22,7 +22,7 @@ export default function AboutPage() {
       />
 
       {/* S01 Mission */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-max max-w-3xl text-center">
           <p className="text-2xl text-gray-700 font-body leading-relaxed">
             Most AI projects fail because companies build on hunches, not data. They run expensive pilots. They integrate nothing. They deploy to silence.
@@ -34,7 +34,7 @@ export default function AboutPage() {
       </section>
 
       {/* S02 Four Differentiators */}
-      <section className="py-16 bg-brand-light">
+      <section className="py-20 bg-brand-light">
         <div className="container-max">
           <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-12">
             What Sets Dejin Apart
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* S03 Africa Advantage */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-max max-w-3xl text-center">
           <h2 className="text-4xl font-display font-bold text-brand-dark mb-8">
             Africa Advantage
@@ -80,25 +80,27 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* S04 Team Placeholder */}
-      <section className="py-16 bg-surface">
-        <div className="container-max">
+      {/* S04 Team */}
+      <section className="py-20 bg-surface">
+        <div className="container-max max-w-3xl">
           <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-12">
             The Team
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white rounded-lg p-8 text-center">
-                <div className="w-24 h-24 rounded-full bg-brand-primary mx-auto mb-6" />
-                <h3 className="text-xl font-display font-bold text-brand-dark mb-2">
-                  Founder {i}
-                </h3>
-                <p className="text-gray-600 font-body mb-4">Role TBD</p>
-                <p className="text-sm text-gray-500 font-body">
-                  Bio and background coming soon
-                </p>
-              </div>
-            ))}
+          <div className="bg-white rounded-2xl p-10 border border-border text-center">
+            <div className="w-16 h-16 rounded-full bg-brand-primary mx-auto mb-6 flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h3 className="text-xl font-display font-bold text-brand-dark mb-3">
+              Built by operators with deep African enterprise technology experience
+            </h3>
+            <p className="text-gray-600 font-body leading-relaxed max-w-xl mx-auto">
+              Dejin is led by practitioners who have built, scaled, and implemented enterprise technology across Africa — across insurance, healthcare, finance, and operational sectors. We've spent our careers solving the exact problems our clients face.
+            </p>
+            <p className="text-gray-400 font-body text-sm mt-6 italic">
+              Full founder profiles coming soon.
+            </p>
           </div>
         </div>
       </section>
@@ -106,10 +108,10 @@ export default function AboutPage() {
       {/* CTA */}
       <CTABanner
         headline="Ready to Work with Dejin?"
-        subheading="Let's talk about your biggest AI bottleneck"
+        subheading="Let's talk about your biggest AI bottleneck."
         cta1Label="Book a Discovery Call"
         cta1Link="/contact"
-        cta2Label="Take the Assessment"
+        cta2Label="Take the Scorecard"
         cta2Link="/readiness"
       />
 
