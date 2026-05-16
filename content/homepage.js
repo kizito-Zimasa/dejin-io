@@ -32,20 +32,24 @@ export const homepageContent = {
 
   // S02 The Problem
   problem: {
-    headline: "The Operations Trap",
-    body: "60–70% of AI projects fail because companies build on hunches, not data. You get expensive pilots, broken integrations, and teams that don't trust the system.",
+    headline: "The Legacy Operations Trap",
+    body: "Most organisations aren't short of AI ambition. They're trapped by what's underneath it — manual approvals, disconnected systems, undocumented business rules, and teams forced to work around the technology they already have. AI pilots fail when they're built on top of this complexity instead of transforming it.",
     painPoints: [
       {
-        title: "Expensive Pilots",
-        description: "Months of discovery, $100k+ spent, nothing in production",
+        title: "Manual Workarounds",
+        description: "Teams rely on email, spreadsheets, follow-ups, and institutional memory to keep work moving. No system captures the real logic of how decisions get made.",
       },
       {
-        title: "Broken Integrations",
-        description: "AI works in isolation. It doesn't talk to your existing systems",
+        title: "Disconnected Systems",
+        description: "Customer channels, documents, transactions, and reporting tools don't speak to each other. Data is everywhere — accessible nowhere.",
       },
       {
-        title: "Team Rejection",
-        description: "Staff don't trust it. Adoption stalls. You're back to manual work",
+        title: "Hidden Business Rules",
+        description: "The logic that drives operations lives in people's heads, legacy code, and informal workarounds. It can't be automated until it's surfaced.",
+      },
+      {
+        title: "AI That Stays Outside",
+        description: "Pilots impress in demos. They break in production because they sit beside real operations instead of inside them.",
       },
     ],
   },
