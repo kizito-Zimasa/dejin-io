@@ -4,7 +4,31 @@ import MetricCard from '../../../components/MetricCard';
 import CTABanner from '../../../components/CTABanner';
 import IndustryChips from '../../../components/IndustryChips';
 import DocumentDemo from '../../../components/DocumentDemo';
+import ProcessFlowDiagram from '../../../components/ProcessFlowDiagram';
 import { documentRoutingContent } from '../../../content/document-routing';
+
+const documentFlow = {
+  before: {
+    steps: [
+      { label: 'Document arrives (email / scan)' },
+      { label: 'Lands in shared inbox', time: '+5 min' },
+      { label: 'Staff opens and reads', time: '+20 min' },
+      { label: 'Decides type and destination', time: '+5 min' },
+      { label: 'Manually forwards to team', time: '+5 min' },
+      { label: 'Team acknowledges receipt', time: '+10 min' },
+    ],
+    totalTime: '~45 min',
+  },
+  after: {
+    steps: [
+      { label: 'Document arrives (any format)' },
+      { label: 'Cortex reads and classifies', time: '<2 sec' },
+      { label: 'Fields extracted automatically', time: '<2 sec' },
+      { label: 'Routed to correct team', time: '<2 sec' },
+    ],
+    totalTime: '~6 sec',
+  },
+};
 
 export const metadata = {
   title: "Document Routing | Dejin",
@@ -39,17 +63,8 @@ export default function DocumentRoutingPage() {
         </div>
       </section>
 
-      {/* S02 Hero Text */}
-      <section className="py-16 bg-white">
-        <div className="container-max text-center max-w-2xl">
-          <h2 className="text-4xl font-display font-bold text-brand-dark mb-6">
-            {content.hero.headline}
-          </h2>
-          <p className="text-xl text-gray-700 font-body">
-            {content.hero.subheading}
-          </p>
-        </div>
-      </section>
+      {/* S02 Process flow */}
+      <ProcessFlowDiagram before={documentFlow.before} after={documentFlow.after} />
 
       {/* S03 The Problem */}
       <section className="py-16 bg-surface">

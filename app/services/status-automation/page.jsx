@@ -3,7 +3,29 @@ import Footer from '../../../components/Footer';
 import MetricCard from '../../../components/MetricCard';
 import CTABanner from '../../../components/CTABanner';
 import IndustryChips from '../../../components/IndustryChips';
+import ProcessFlowDiagram from '../../../components/ProcessFlowDiagram';
 import { statusAutomationContent } from '../../../content/status-automation';
+
+const statusFlow = {
+  before: {
+    steps: [
+      { label: 'Customer calls or emails' },
+      { label: 'On hold / in queue', time: '+8 min' },
+      { label: 'Staff answers', time: '+2 min' },
+      { label: 'Looks up status in system', time: '+3 min' },
+      { label: 'Reads back status to customer', time: '+2 min' },
+    ],
+    totalTime: '~15 min',
+  },
+  after: {
+    steps: [
+      { label: 'Customer asks via any channel' },
+      { label: 'AI checks live system data', time: '<1 sec' },
+      { label: 'Responds with accurate status', time: '<1 sec' },
+    ],
+    totalTime: '~2 sec',
+  },
+};
 
 export const metadata = {
   title: "Status Automation | Dejin",
@@ -32,17 +54,8 @@ export default function StatusAutomationPage() {
         </div>
       </section>
 
-      {/* S02 Hero Text */}
-      <section className="py-16 bg-white">
-        <div className="container-max text-center max-w-2xl">
-          <h2 className="text-4xl font-display font-bold text-brand-dark mb-6">
-            {content.hero.headline}
-          </h2>
-          <p className="text-xl text-gray-700 font-body">
-            {content.hero.subheading}
-          </p>
-        </div>
-      </section>
+      {/* S02 Process flow */}
+      <ProcessFlowDiagram before={statusFlow.before} after={statusFlow.after} />
 
       {/* S03 The Problem */}
       <section className="py-16 bg-surface">

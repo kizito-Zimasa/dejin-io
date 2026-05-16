@@ -1,12 +1,14 @@
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import CTABanner from '../components/CTABanner';
 import DeliveryTimeline from '../components/DeliveryTimeline';
 import DifferentiatorBlock from '../components/DifferentiatorBlock';
 import IndustryChips from '../components/IndustryChips';
 import ROICalculator from '../components/ROICalculator';
+import DeviceMockup from '../components/DeviceMockup';
+import ChatPreview from '../components/ChatPreview';
+import Link from 'next/link';
 import { homepageContent } from '../content/homepage';
 
 export const metadata = {
@@ -22,14 +24,47 @@ export default function HomePage() {
       <NavBar />
 
       {/* S01 Hero */}
-      <HeroSection
-        headline={content.hero.headline}
-        subheading={content.hero.subheading}
-        cta1Label={content.hero.cta1}
-        cta1Link="#quick-wins"
-        cta2Label={content.hero.cta2}
-        cta2Link="/contact"
-      />
+      <section className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-brand-light to-white">
+        <div className="container-max">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: text */}
+            <div>
+              <p className="text-sm font-body font-semibold text-brand-primary uppercase tracking-widest mb-4">
+                AI Transformation · Africa-native · 3 weeks
+              </p>
+              <h1 className="text-5xl md:text-6xl font-display font-bold text-brand-dark mb-6 leading-tight">
+                {content.hero.headline}
+              </h1>
+              <p className="text-lg text-gray-700 font-body mb-10 leading-relaxed">
+                {content.hero.subheading}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="#quick-wins"
+                  className="px-8 py-3.5 bg-brand-primary text-white font-body font-semibold rounded-lg hover:opacity-90 transition-opacity text-center"
+                >
+                  {content.hero.cta1}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-8 py-3.5 border-2 border-brand-dark text-brand-dark font-body font-semibold rounded-lg hover:bg-brand-light transition-colors text-center"
+                >
+                  {content.hero.cta2}
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: device mockup */}
+            <div className="hidden md:block">
+              <DeviceMockup url="dejin.io/services/chatbot">
+                <div className="h-[420px] flex flex-col">
+                  <ChatPreview />
+                </div>
+              </DeviceMockup>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* S02 The Problem */}
       <section className="py-16 bg-white">

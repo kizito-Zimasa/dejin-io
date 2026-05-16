@@ -5,7 +5,30 @@ import MetricCard from '../../../components/MetricCard';
 import CTABanner from '../../../components/CTABanner';
 import IndustryChips from '../../../components/IndustryChips';
 import ChatDemo from '../../../components/ChatDemo';
+import ProcessFlowDiagram from '../../../components/ProcessFlowDiagram';
 import { chatbotContent } from '../../../content/chatbot';
+
+const chatbotFlow = {
+  before: {
+    steps: [
+      { label: 'Customer sends inquiry' },
+      { label: 'Added to staff queue', time: '+2 min' },
+      { label: 'Staff picks up ticket', time: '+15 min' },
+      { label: 'Looks up account & policy', time: '+3 min' },
+      { label: 'Types and sends response', time: '+3 min' },
+    ],
+    totalTime: '~23 min',
+  },
+  after: {
+    steps: [
+      { label: 'Customer sends inquiry' },
+      { label: 'Amara reads & understands', time: '<1 sec' },
+      { label: 'Checks live policy data', time: '<1 sec' },
+      { label: 'Responds accurately', time: '<1 sec' },
+    ],
+    totalTime: '~30 sec',
+  },
+};
 
 export const metadata = {
   title: "Customer Service Chatbot | Dejin",
@@ -40,17 +63,8 @@ export default function ChatbotPage() {
         </div>
       </section>
 
-      {/* S02 Hero Text */}
-      <section className="py-16 bg-white">
-        <div className="container-max text-center max-w-2xl">
-          <h2 className="text-4xl font-display font-bold text-brand-dark mb-6">
-            {content.hero.headline}
-          </h2>
-          <p className="text-xl text-gray-700 font-body">
-            {content.hero.subheading}
-          </p>
-        </div>
-      </section>
+      {/* S02 Process flow */}
+      <ProcessFlowDiagram before={chatbotFlow.before} after={chatbotFlow.after} />
 
       {/* S03 The Problem */}
       <section className="py-16 bg-surface">

@@ -1,8 +1,8 @@
 export const homepageContent = {
   // S01 Hero
   hero: {
-    headline: "From AI ambition to working systems — guided.",
-    subheading: "We guide organisations from AI uncertainty to working systems — starting with quick wins, then scaling what works.",
+    headline: "From legacy workflows to AI-powered operations.",
+    subheading: "Dejin helps African enterprises turn manual, repetitive processes into practical AI systems — starting with high-impact quick wins delivered in 3 weeks and scaling what works through Cortex.",
     cta1: "See the Three Quick Wins",
     cta2: "Book a Discovery Call",
   },
