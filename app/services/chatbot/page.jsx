@@ -43,7 +43,7 @@ export default function ChatbotPage() {
       <NavBar />
 
       {/* S01 Hero & Demo */}
-      <section className="min-h-screen flex items-center justify-center pt-20 pb-16 bg-gradient-to-br from-brand-light to-white">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-brand-light to-white">
         <div className="container-max max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Hero Text */}

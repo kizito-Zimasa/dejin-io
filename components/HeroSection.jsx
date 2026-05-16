@@ -14,7 +14,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`min-h-screen flex items-center justify-center pt-20 pb-16 ${
+      className={`pt-32 pb-16 ${
         isPrimary
           ? 'bg-gradient-to-br from-brand-light to-white'
           : 'bg-white'
