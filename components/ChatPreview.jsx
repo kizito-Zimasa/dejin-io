@@ -7,7 +7,7 @@ const MESSAGES = [
   },
   {
     role: 'user',
-    content: 'What's the status of my recent claim?',
+    content: "What's the status of my recent claim?",
   },
   {
     role: 'assistant',
