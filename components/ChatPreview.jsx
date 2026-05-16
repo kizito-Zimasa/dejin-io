@@ -31,12 +31,12 @@ function PreviewMessage({ role, content }) {
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-2.5`}>
       {!isUser && (
-        <div className="w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white text-xs font-bold mr-1.5 flex-shrink-0 mt-0.5">
+        <div className="w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white text-sm font-bold mr-1.5 flex-shrink-0 mt-0.5">
           A
         </div>
       )}
       <div
-        className={`max-w-[78%] px-3 py-2 rounded-2xl text-xs font-body leading-relaxed ${
+        className={`max-w-[78%] px-3 py-2 rounded-2xl text-sm font-body leading-relaxed ${
           isUser
             ? 'bg-brand-primary text-white rounded-br-sm'
             : 'bg-surface text-gray-800 rounded-bl-sm border border-border'
@@ -53,16 +53,16 @@ export default function ChatPreview() {
     <div className="flex flex-col h-full">
       {/* Chat header */}
       <div className="bg-brand-dark px-4 py-3 flex items-center gap-2.5">
-        <div className="w-7 h-7 rounded-full bg-brand-primary flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+        <div className="w-7 h-7 rounded-full bg-brand-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
           A
         </div>
         <div>
-          <p className="text-white font-body font-semibold text-xs">Amara</p>
-          <p className="text-gray-400 font-body text-xs">Health Insurance AI</p>
+          <p className="text-white font-body font-semibold text-sm">Amara</p>
+          <p className="text-gray-400 font-body text-sm">Health Insurance AI</p>
         </div>
         <div className="ml-auto flex items-center gap-1">
           <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-          <span className="text-gray-400 text-xs font-body">Live</span>
+          <span className="text-gray-400 text-sm font-body">Live</span>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ export default function ChatPreview() {
         {PROMPTS.map((p) => (
           <span
             key={p}
-            className="text-xs font-body font-semibold px-2.5 py-1 rounded-full border border-brand-primary text-brand-primary"
+            className="text-sm font-body font-semibold px-2.5 py-1 rounded-full border border-brand-primary text-brand-primary"
           >
             {p}
           </span>
@@ -87,7 +87,7 @@ export default function ChatPreview() {
 
       {/* Input bar */}
       <div className="px-3 pb-3 flex gap-2 items-center">
-        <div className="flex-1 rounded-xl border border-border px-3 py-2 text-xs font-body text-gray-400 bg-white">
+        <div className="flex-1 rounded-xl border border-border px-3 py-2 text-sm font-body text-gray-400 bg-white">
           Ask about your coverage or claims...
         </div>
         <div className="w-8 h-8 rounded-xl bg-brand-primary flex items-center justify-center flex-shrink-0">
