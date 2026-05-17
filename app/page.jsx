@@ -47,11 +47,11 @@ export default function HomePage() {
               </FadeUp>
               <FadeUp delay={0.24}>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="#quick-wins" className="btn-primary">
-                    {content.hero.cta1}
-                  </Link>
-                  <Link href="/contact" className="btn-dark">
+                  <Link href="/contact" className="btn-primary">
                     {content.hero.cta2}
+                  </Link>
+                  <Link href="#quick-wins" className="btn-dark">
+                    {content.hero.cta1}
                   </Link>
                 </div>
               </FadeUp>

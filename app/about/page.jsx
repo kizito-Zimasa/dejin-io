@@ -16,8 +16,8 @@ export default function AboutPage() {
 
       {/* Hero */}
       <HeroSection
-        headline="Built Because Most AI Projects Fail"
-        subheading="We saw 60–70% of AI projects fail. So we built the antidote."
+        headline="From Legacy Workflows to AI-Powered Operations"
+        subheading="Founder-led by experienced African enterprise technology operators — helping organisations transform how work gets done."
         variant="secondary"
       />
 
@@ -25,10 +25,10 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container-max max-w-3xl text-center">
           <p className="text-2xl text-gray-700 font-body leading-relaxed">
-            Most AI projects fail because companies build on hunches, not data. They run expensive pilots. They integrate nothing. They deploy to silence.
+            Most organisations are not short of AI ambition. They are trapped by legacy workflows — manual approvals, disconnected systems, undocumented business rules, and teams working around the technology they already have.
           </p>
           <p className="text-2xl text-gray-700 font-body leading-relaxed mt-6">
-            We built Dejin to fix this. We embed AI into your operations, not as a separate tool. We deliver working systems in 3 weeks. We train your team. We guarantee results.
+            Dejin was built to fix this. We embed AI into real operations, connect it to live systems, train the teams that use it, and leave organisations with a working AI capability — not a demo. Starting with one high-impact workflow. Scaling through Cortex.
           </p>
         </div>
       </section>

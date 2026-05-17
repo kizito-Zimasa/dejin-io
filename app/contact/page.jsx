@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@dejin.io';
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@dejin.io';
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || '';
 
   return (
@@ -49,8 +49,16 @@ export default function ContactPage() {
             </div>
 
             <div>
+              <p className="text-gray-600 font-body mb-2">Office</p>
+              <p className="text-lg text-gray-700 font-body leading-relaxed">
+                14, Chalbi Drive, Lavington<br />
+                Nairobi, Kenya
+              </p>
+            </div>
+
+            <div>
               <p className="text-gray-600 font-body mb-2">Response Time</p>
-              <p className="text-xl text-gray-700 font-body">Within 24 hours</p>
+              <p className="text-lg text-gray-700 font-body">Within 24 hours</p>
             </div>
           </div>
         </div>

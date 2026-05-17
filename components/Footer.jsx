@@ -3,7 +3,7 @@ import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@dejin.io';
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@dejin.io';
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/company/dejin';
 
   return (
@@ -115,7 +115,7 @@ export default function Footer() {
                   href="/readiness"
                   className="text-gray-300 font-body text-sm hover:text-brand-primary transition-colors"
                 >
-                  AI Readiness Assessment
+                  Readiness Scorecard
                 </Link>
               </li>
             </ul>
@@ -136,6 +136,10 @@ export default function Footer() {
                   >
                     {contactEmail}
                   </a>
+                </p>
+                <p className="font-body text-sm text-gray-300">
+                  14, Chalbi Drive, Lavington<br />
+                  Nairobi, Kenya
                 </p>
                 <p className="font-body text-sm">
                   <a
