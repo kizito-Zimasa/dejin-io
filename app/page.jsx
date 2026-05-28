@@ -212,7 +212,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* S08 Industries */}
+      {/* S08 Dejin-Built Products */}
+      <section className="py-20 bg-surface">
+        <div className="container-max">
+          <FadeUp>
+            <p className="text-sm font-body font-semibold text-brand-primary uppercase tracking-widest text-center mb-3">
+              Dejin-Built Platforms
+            </p>
+            <h2 className="text-4xl font-display font-bold text-center text-brand-dark mb-4">
+              Focused AI products for industries where compliance and evidence matter.
+            </h2>
+            <p className="text-lg text-center text-gray-600 font-body mb-12 max-w-2xl mx-auto">
+              Dejin not only builds custom AI solutions — we also develop focused platforms for sectors where governance, records, approvals, and audit-ready evidence are core to how organisations operate.
+            </p>
+          </FadeUp>
+
+          <FadeUp>
+            <div className="bg-brand-dark rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-1">
+                <p className="text-xs font-body font-semibold uppercase tracking-widest mb-3" style={{ color: '#1A9E8C' }}>
+                  Product
+                </p>
+                <h3 className="text-3xl font-display font-bold text-white mb-3">Ordra</h3>
+                <p className="text-base font-body text-gray-300 leading-relaxed mb-4">
+                  AI compliance workspace for professional firms and regulated entities. Governance, tax compliance, filings, board records, approvals, and audit-ready evidence — in one secure place.
+                </p>
+                <p className="text-sm font-body text-gray-400 leading-relaxed">
+                  Built for company secretaries, tax firms, law firms, engineers, architects, professional associations, and regulated organisations across Africa.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 md:items-end justify-center flex-shrink-0">
+                <div className="flex flex-wrap gap-2">
+                  {['Company Secretaries', 'Tax Firms', 'Law Firms', 'Regulated Orgs'].map((tag) => (
+                    <span key={tag} className="px-3 py-1 text-xs font-body text-gray-400 border border-white border-opacity-20 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  href="/products/ordra"
+                  className="mt-4 inline-block px-6 py-3 bg-brand-primary text-white font-body font-semibold rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  Explore Ordra →
+                </Link>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* S09 Industries */}
       <section className="py-20 bg-white">
         <div className="container-max">
           <FadeUp>

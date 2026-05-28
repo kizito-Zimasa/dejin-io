@@ -21,9 +21,9 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Services Column */}
+          {/* Solutions Column */}
           <div>
-            <h4 className="font-display font-bold mb-4">Services</h4>
+            <h4 className="font-display font-bold mb-4">Solutions</h4>
             <ul className="space-y-2">
               <li>
                 <Link
